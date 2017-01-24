@@ -4,9 +4,9 @@ learn-slims8docker
 ## Getting Started
 
  * Remove folder slims8_akasia
- ```bash
+```bash
      rmdir slims8_akasia
- ```
+```
  * Download file slims8_akasia
 ```bash
     git clon https://github.com/slims/slims8_akasia.git
