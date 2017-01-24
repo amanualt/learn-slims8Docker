@@ -1,4 +1,4 @@
-learn-slims8docker
+slims8_akasia Docker
 =============
 
 ## Getting Started
