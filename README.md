@@ -9,16 +9,16 @@ learn-slims8docker
     git clon https://github.com/slims/slims8_akasia.git
  ```
  * build file database
- ```bash
+```bash
     cd database
     docker build .
- ```
+```
  * build file docker-compos.yml
- ```bash
+```bash
     cd ..
     docker-compos build
- ```
+```
  * Run aplikasi
- ```bash
+```bash
     docker-compos up -d
- ```
+```
