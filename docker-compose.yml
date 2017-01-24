@@ -1,0 +1,20 @@
+app:
+  build: .
+  ports:
+  - "8000:80"
+  links:
+  - "db:db"
+
+db:
+  build: ./database
+  container_name: db
+  volumes:
+  - db_data:/var/lib/mysql
+  restart: always
+  ports:
+  - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_USER: senayanuser
+    MYSQL_PASSWORD: root
+    MYSQL_DATABASE: senayandb

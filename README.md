@@ -5,9 +5,9 @@ learn-slims8docker
 
  * Remove folder slims8_akasia
  * Download file slims8_akasia
- ```
- git clon https://github.com/slims/slims8_akasia.git
- ```
+```bash
+git clon https://github.com/slims/slims8_akasia.git
+```
  * build file database
  ```
  cd database
