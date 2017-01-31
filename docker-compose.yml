@@ -13,6 +13,6 @@ db:
   restart: always
   environment:
     MYSQL_ROOT_PASSWORD: root
-    MYSQL_USER: senayanuser
+    MYSQL_USER: root
     MYSQL_PASSWORD: root
     MYSQL_DATABASE: senayandb
