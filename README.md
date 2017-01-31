@@ -34,5 +34,5 @@ Make sure you have installed these packages:
 ```bash
     docker-compose up -d
 ```
-* tutorial youtube
-https://youtu.be/MrCrkqxHSuE
+* Tutorial youtube
+     https://youtu.be/MrCrkqxHSuE
