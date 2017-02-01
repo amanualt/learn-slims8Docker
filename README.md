@@ -36,10 +36,10 @@ Make sure you have installed these packages:
 ```
 ##Browse
  Visit https://localhost:8000 on your browser.
- * Database Host [ `db` ]
- * Database Name [ senayandb ]
- * Database Username [ root ]
- * Database Password [ root ] 
+ * Database Host: `db`
+ * Database Name: `senayandb`
+ * Database Username: `root`
+ * Database Password: `root` 
 
 ##Tutorial youtube
      https://youtu.be/MrCrkqxHSuE
