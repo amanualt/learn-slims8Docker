@@ -38,7 +38,7 @@ Make sure you have installed these packages:
     Visit https://localhost:8000 on your browser.
     * Database Host [ db ]
     * Database Name [ senayandb]
-    * Database Username [ root]
+    * Database Username [ root ]
     * Database Password [ root ] 
 
 ##Tutorial youtube
