@@ -34,5 +34,7 @@ Make sure you have installed these packages:
 ```bash
     docker-compose up -d
 ```
-* Tutorial youtube
+ * Browse
+    Visit https://localhost:8000 on your browser.
+ * Tutorial youtube
      https://youtu.be/MrCrkqxHSuE
