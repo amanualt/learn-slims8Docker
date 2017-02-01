@@ -11,7 +11,8 @@ RUN apt-get install -y \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
     libpng12-dev \
-    libxslt1-dev
+    libxslt1-dev \
+    git-core
 
 # Configure the gd library
 RUN docker-php-ext-configure \
@@ -27,7 +28,8 @@ RUN docker-php-ext-install \
   xsl \
   zip \
   soap
-
-COPY ./slims8_akasia /var/www/html/
+  
+# Install slims
+RUN git clone https://github.com/slims/slims8_akasia.git /var/www/html/slims8_akasia
 RUN chmod 777 /var/www/html/ -R
 RUN chown www-data:www-data /var/www/html/ -R

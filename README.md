@@ -1,38 +1,30 @@
-slims8_akasia Docker
-=============
+Dockerize Slim 8 (akasia)
+===
 
-## Before Getting Started
-Make sure you have installed these packages:
- * docker
- * docker-compose
+### Before Getting Started
+Make sure you have installed on your machine:
+* docker (docker engine)
+* docker-compose
 
-## Getting Started
+### Run
+1. Clone project
+```bash
+git clone https://github.com/amanuDigm/learn-slims8Docker.git
+```
+* Build database
+```bash
+cd database
+docker build .
+```
+* Composing the image (refer: `docker-compose.yml`)
+```bash
+cd ..
+docker-compose build
+```
+* Run app
+```bash
+docker-compose up -d
+```
 
- * Clone your copy of docker
-```bash
-     git clone https://github.com/amanuDigm/learn-slims8Docker.git
-```
- * Remove folder slims8_akasia
-```bash
-     rm -rf slims8_akasia
-```
- * Download file slims8_akasia
-```bash
-    git clone https://github.com/slims/slims8_akasia.git
-```
- * Build file database
-```bash
-    cd database
-    docker build .
-```
- * Build file docker-compose.yml
-```bash
-    cd ..
-    docker-compose build
-```
- * Run aplikasi
-```bash
-    docker-compose up -d
-```
-* Tutorial youtube
-     https://youtu.be/MrCrkqxHSuE
+### Youtube tutorial
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MrCrkqxHSuE" frameborder="0" allowfullscreen></iframe>
