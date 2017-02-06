@@ -25,10 +25,6 @@ docker-compose build
 ```bash
 docker-compose up -d
 ```
-- Run aplikasi
-```bash
-    docker-compose up -d
-```
 ### Browse
  Visit https://localhost:8000 on your browser.
  * Database Host: `db`
