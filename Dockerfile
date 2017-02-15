@@ -30,6 +30,6 @@ RUN docker-php-ext-install \
   soap
   
 # Install slims
-RUN git clone https://github.com/slims/slims8_akasia.git /var/www/html/slims8_akasia
+RUN git clone https://github.com/slims/slims8_akasia.git /var/www/html/
 RUN chmod 777 /var/www/html/ -R
 RUN chown www-data:www-data /var/www/html/ -R
