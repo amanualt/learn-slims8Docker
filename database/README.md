@@ -6,5 +6,5 @@
 
 #### Create container
 ```bash
-docker run -td --name slims-akasia-db imamdigmi/slims-akasia-db
+docker build -t senayandb .
 ```
