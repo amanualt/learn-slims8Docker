@@ -6,5 +6,5 @@
 
 #### Create container
 ```bash
-docker build -t senayandb .
+docker build .
 ```
