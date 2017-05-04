@@ -19,9 +19,18 @@ docker-compose build
 ```bash
 docker-compose up -d
 ```
+
+### OR
+Pull slims8 Docker
+===
+```bash
+docker pull amanu/slims_web
+```
+
 ### Browse
  Visit https://localhost:8080 on your browser.
  * Database Host: `db`
  * Database Name: `senayandb`
  * Database Username: `root`
  * Database Password: `root`
+
