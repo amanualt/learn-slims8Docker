@@ -11,11 +11,6 @@ Make sure you have installed on your machine:
 ```bash
 git clone https://github.com/amanuDigm/learn-slims8Docker.git
 ```
-- Build database
-```bash
-cd database
-docker build .
-```
 - Composing the image (refer: `docker-compose.yml`)
 ```bash
 cd ..
@@ -30,7 +25,4 @@ docker-compose up -d
  * Database Host: `db`
  * Database Name: `senayandb`
  * Database Username: `root`
- * Database Password: `root` 
- 
-### Youtube tutorial
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MrCrkqxHSuE/0.jpg)](https://www.youtube.com/watch?v=MrCrkqxHSuE)
+ * Database Password: `root`

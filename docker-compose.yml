@@ -1,18 +1,24 @@
-app:
-  build: .
-  ports:
-  - "8000:80"
-  links:
-  - "db:db"
+version: '3'
 
-db:
-  build: ./database
-  container_name: db
-  volumes:
-  - db_data:/var/lib/mysql
-  restart: always
-  environment:
-    MYSQL_ROOT_PASSWORD: root
-    MYSQL_USER: root
-    MYSQL_PASSWORD: root
-    MYSQL_DATABASE: senayandb
+services:
+  web:
+    build: .
+    ports:
+    - "8080:80"
+    links:
+    - "db:db"
+
+  db:
+    image: mysql:5.6
+    container_name: db
+    volumes:
+    - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: senayandb
+
+volumes:
+  db_data:
