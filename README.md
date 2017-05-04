@@ -30,6 +30,7 @@ docker pull amanu/slims_web
 ### Run
 ```
 docker run -d -p 8080:80 amanu/slims_web:1.0
+```
 
 ### Browse
  Visit https://localhost:8080 on your browser.
