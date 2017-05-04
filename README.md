@@ -13,7 +13,6 @@ git clone https://github.com/amanuDigm/learn-slims8Docker.git
 ```
 - Composing the image (refer: `docker-compose.yml`)
 ```bash
-cd ..
 docker-compose build
 ```
 - Run app
