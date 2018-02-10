@@ -27,7 +27,8 @@ RUN docker-php-ext-install \
   pdo_mysql \
   xsl \
   zip \
-  soap
+  soap \
+  gettext
 
 # Install slims
 RUN git clone https://github.com/slims/slims8_akasia.git /var/www/html/
