@@ -1,0 +1,68 @@
+#Deployment
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: slims-deployment-pv
+spec:
+ replicas: 1
+ template:
+  metadata:
+   labels:
+    app: slims
+  spec:
+   volumes:
+     - name: slims-pv
+       persistentVolumeClaim:
+        claimName: slims-claim
+   containers:
+     - name: slims-container-pv
+       image: amanu/slims:8.0
+       ports:
+         - containerPort: 80
+           name: "http-slims"
+       volumeMounts:
+         - mountPath: "/var/www/html"
+           name: slims-pv
+#Service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: slims-service-pv
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      nodePort: 31111
+  selector:
+    app: slims
+#Persistent Volume
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: slims-volume-pv
+  type: local
+  labels:
+spec:
+  storageClassName: slims
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/root/slims/app"
+#Persistent Volume Claim
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: slims-claim
+spec:
+  storageClassName: slims
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi

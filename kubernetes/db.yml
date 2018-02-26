@@ -1,0 +1,72 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: slims-db
+spec:
+ replicas: 1
+ template:
+  metadata:
+   labels:
+    app: slims
+  spec:
+   volumes:
+     - name: slims-db
+       persistentVolumeClaim:
+        claimName: slims-claim-db
+   containers:
+    - name: slims-db
+      image: mysql:5.6
+      ports:
+        - containerPort: 3306
+          protocol: TCP
+      volumeMounts:
+         - mountPath: "/docker-entrypoint-initdb.d"
+           name: slims-db
+      env:
+        - name: "MYSQL_ROOT_PASSWORD"
+          value: "root"
+        - name: "MYSQL_DATABASE"
+          value: "senayandb"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: slims-db
+  labels:
+    name: slims-db
+    app: slims
+spec:
+  ports:
+  - port: 3306
+    name: slims-db
+    targetPort: 3306
+  selector:
+    name: slims-db
+    app: slims
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: slims-volume-db
+  labels:
+    type: local
+spec:
+  storageClassName: db-slims
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/root/slims/db"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: slims-claim-db
+spec:
+  storageClassName: db-slims
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
