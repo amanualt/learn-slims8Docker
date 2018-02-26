@@ -38,19 +38,20 @@ docker-compose up -d
 Pastikan ada 2 server untuk menjalankan kubernetes dimana 1 server buat master dan 1 server buat node, cara install: https://www.linuxtechi.com/install-kubernetes-1-7-centos7-rhel7/
 
 ##### Pada Node
-    Buatlah folder 
-    - mkdir  -p /root/slims/{app, db}
-    - git clone https://github.com/slims/slims8_akasia.git /root/slims/app
+Buatlah folder 
+ - mkdir  -p /root/slims/{app, db}
+ - git clone https://github.com/slims/slims8_akasia.git /root/slims/app
 
 ##### Pada master
-    -  git clone https://github.com/amanualt/learn-slims8Docker.git
-    - kubectl create -f learn-slims8Docker/Kubernetes
-    lihat pods apakah sudah jalan atau blm
-    - kubectl get pods
+Ambil repo dari slims
+- git clone https://github.com/amanualt/learn-slims8Docker.git
+- kubectl create -f learn-slims8Docker/Kubernetes
+lihat pods apakah sudah jalan atau blm
+- kubectl get pods
 
 ##### Browser
-    akses http://ip-master:31111 di browser:
-    * Database Host: `db`
-    * Database Name: `senayandb`
-    * Database Username: `root`
-    * Database Password: `root`
+akses http://ip-master:31111 di browser:
+ * Database Host: `db`
+ * Database Name: `senayandb`
+ * Database Username: `root`
+ * Database Password: `root`
