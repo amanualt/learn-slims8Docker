@@ -20,5 +20,15 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: senayandb
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    ports:
+     - 8181:80
+
 volumes:
   db_data:
