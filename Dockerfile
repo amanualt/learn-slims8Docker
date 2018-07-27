@@ -10,9 +10,13 @@ RUN apt-get install -y \
     libicu-dev \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
-    libpng12-dev \
+    libpng-dev \
     libxslt1-dev \
-    git-core
+    libyaz4-dev \
+    git-core \
+    yaz
+
+RUN pecl install yaz
 
 # Configure the gd library
 RUN docker-php-ext-configure \
@@ -29,6 +33,8 @@ RUN docker-php-ext-install \
   zip \
   soap \
   gettext
+
+RUN docker-php-ext-enable yaz
 
 # Install slims
 RUN git clone https://github.com/slims/slims8_akasia.git /var/www/html/
