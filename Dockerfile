@@ -14,6 +14,7 @@ RUN apt-get install -y \
     libxslt1-dev \
     libyaz4-dev \
     git-core \
+    mysql-client \
     yaz
 
 RUN pecl install yaz
